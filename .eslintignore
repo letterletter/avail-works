@@ -1,0 +1,26 @@
+# 忽略目录
+build
+lib
+es
+dist
+tests
+demo
+node_modules
+.ice
+def-login-client
+coverage/
+.vscode-test
+tmp
+.tmp
+__mocks__
+out
+__tests__
+docs
+
+# 忽略文件
+**/*-min.js
+**/*.min.js
+
+# 特殊文件
+packages/material-ui
+packages/doctor-ui

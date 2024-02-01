@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  position: relative;
+
+  .tip {
+    height: 50px;
+    width: 400px;
+    margin: 0 auto;
+
+    .btn {
+      &:hover {
+        color: $color-notice-4 !important;
+      }
+    }
+  }
+  .form {
+    width: 400px;
+    margin: 0 auto;
+    height: calc(100vh - 160px);
+
+    .help {
+      font-size: 12px;
+    }
+
+    .errorMsg {
+      width: 400px;
+      font-size: 13px;
+      color: red;
+      margin-top: -16px;
+    }
+  }
+
+  .action {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

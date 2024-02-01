@@ -1,0 +1,20 @@
+{
+  "name": "@appworks/i18n",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "compile": "rm -rf lib && tsc -p ./tsconfig.json",
+    "prepublishOnly": "npm run compile"
+  },
+  "keywords": [
+    "i18n"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "lodash.template": "^4.5.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

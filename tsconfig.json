@@ -1,0 +1,13 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/constant" },
+    { "path": "packages/cli" },
+    { "path": "packages/i18n" },
+    { "path": "packages/storage" },
+    { "path": "packages/connector" },
+    { "path": "packages/project-utils" },
+    { "path": "packages/common-service" },
+    { "path": "packages/project-service" },
+  ]
+}
