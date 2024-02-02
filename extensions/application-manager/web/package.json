@@ -1,6 +1,6 @@
 {
-  "name": "web-for-appworks-app",
-  "version": "0.2.0",
+  "name": "web-for-availworks-app",
+  "version": "0.0.1",
   "description": "web for AppWorks",
   "private": true,
   "devDependencies": {

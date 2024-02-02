@@ -1,9 +1,9 @@
 {
-  "name": "iceworks",
+  "name": "availworks",
   "displayName": "AppWorks",
   "description": "Application Development Pack, provide visualization and intelligent technology to build Universal Application faster and better, support Web / H5 / MiniProgram(小程序) Application.",
-  "publisher": "iceworks-team",
-  "version": "1.5.3",
+  "publisher": "availworks-team",
+  "version": "0.0.1",
   "engines": {
     "vscode": "^1.73.0"
   },

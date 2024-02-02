@@ -1,8 +1,8 @@
 {
-  "name": "iceworks-project-creator",
+  "name": "availworks-project-creator",
   "displayName": "Application Creator",
   "description": "Quick create a Universal Application(React/Rax/Vue, etc).",
-  "publisher": "iceworks-team",
+  "publisher": "availworks-team",
   "version": "1.0.8",
   "engines": {
     "vscode": "^1.73.0"

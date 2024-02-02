@@ -1,9 +1,9 @@
 {
-  "name": "iceworks-material-helper",
+  "name": "availworks-material-helper",
   "displayName": "Component Helper",
   "description": "Easily use Component in React/Vue/Rax.",
-  "publisher": "iceworks-team",
-  "version": "1.1.4",
+  "publisher": "availworks-team",
+  "version": "0.0.1",
   "main": "./build/extension.js",
   "engines": {
     "vscode": "^1.73.0"

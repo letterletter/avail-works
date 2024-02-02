@@ -1,6 +1,6 @@
 {
-  "name": "@appworks/i18n",
-  "version": "0.1.0",
+  "name": "@availworks/i18n",
+  "version": "0.0.1",
   "main": "lib/index.js",
   "scripts": {
     "compile": "rm -rf lib && tsc -p ./tsconfig.json",
