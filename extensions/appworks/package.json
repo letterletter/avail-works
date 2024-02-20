@@ -1,8 +1,8 @@
 {
   "name": "availworks",
-  "displayName": "AppWorks",
+  "displayName": "AvailWorks",
   "description": "Application Development Pack, provide visualization and intelligent technology to build Universal Application faster and better, support Web / H5 / MiniProgram(小程序) Application.",
-  "publisher": "availworks-team",
+  "publisher": "letterletter",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.73.0"
@@ -33,9 +33,9 @@
   },
   "icon": "public/logo.png",
   "extensionPack": [
-    "iceworks-team.iceworks-app",
-    "iceworks-team.iceworks-project-creator",
-    "iceworks-team.iceworks-material-helper",
+    "letterletter.availworks-app",
+    "letterletter.availworks-project-creator",
+    "letterletter.availworks-material-helper",
     "eamodio.gitlens",
     "streetsidesoftware.code-spell-checker",
     "dbaeumer.vscode-eslint",

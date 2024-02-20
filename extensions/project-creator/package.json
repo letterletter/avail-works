@@ -2,7 +2,7 @@
   "name": "availworks-project-creator",
   "displayName": "Application Creator",
   "description": "Quick create a Universal Application(React/Rax/Vue, etc).",
-  "publisher": "availworks-team",
+  "publisher": "letterletter",
   "version": "1.0.8",
   "engines": {
     "vscode": "^1.73.0"

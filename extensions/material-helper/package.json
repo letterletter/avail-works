@@ -2,7 +2,7 @@
   "name": "availworks-material-helper",
   "displayName": "Component Helper",
   "description": "Easily use Component in React/Vue/Rax.",
-  "publisher": "availworks-team",
+  "publisher": "letterletter",
   "version": "0.0.1",
   "main": "./build/extension.js",
   "engines": {
