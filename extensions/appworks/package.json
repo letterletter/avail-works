@@ -34,7 +34,6 @@
   "icon": "public/logo.png",
   "extensionPack": [
     "letterletter.availworks-app",
-    "letterletter.availworks-project-creator",
     "letterletter.availworks-material-helper",
     "eamodio.gitlens",
     "streetsidesoftware.code-spell-checker",

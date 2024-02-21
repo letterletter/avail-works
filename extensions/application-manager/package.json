@@ -365,7 +365,7 @@
     "util": "^0.12.3"
   },
   "extensionDependencies": [
-    "letterletter.availworks-project-creator"
+    "letterletter.availworks-material-helper"
   ],
   "homepage": "https://github.com/apptools-lab/appworks/blob/master/extensions/application-manager/README.md",
   "bugs": {

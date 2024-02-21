@@ -1,8 +1,0 @@
-.vscode/**
-.vscode-test/**
-.gitignore
-**/*.map
-web/**
-node_modules/**
-!node_modules/prettier
-
