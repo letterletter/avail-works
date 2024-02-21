@@ -22,6 +22,7 @@ function packExtension(extension: string, directory: string, version: string): v
 async function start() {
   try {
     await checkPackagePublished(true);
+    console.log('still await ----')
     await sleep(50000);
     console.log('[PUBLISH BETA] Start:');
     const extensionInfos: IExtensionInfo[] = await getExtensionInfos();

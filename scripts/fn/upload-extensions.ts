@@ -4,11 +4,11 @@
 import * as path from 'path';
 import * as fs from 'fs-extra';
 import * as AdmZip from 'adm-zip';
-// import upload from './uploadToIceworksOSS';
+import upload from './uploadToIceworksOSS';
 
 const zip = new AdmZip();
 
-const ZIP_NAME = 'AppWorks.zip';
+const ZIP_NAME = 'AvailWorks.zip';
 const ZIP_FILE = path.join(__dirname, ZIP_NAME);
 const EXTENSIONS_DIR = path.join(__dirname, 'AppWorks');
 
@@ -37,8 +37,8 @@ export default function uploadExtesions(extensions: string[], production?: boole
     const extensionFilePath = path.join(directory, extensionFile);
 
     // Upload extension
-    // upload(`vscode-extensions/${production ? 'release' : 'beta'}/${extensionFile}`, extensionFilePath);
-    // fs.copySync(extensionFilePath, path.join(EXTENSIONS_DIR, extensionFile));
+    upload(`vscode-extensions/${production ? 'release' : 'beta'}/${extensionFile}`, extensionFilePath);
+    fs.copySync(extensionFilePath, path.join(EXTENSIONS_DIR, extensionFile));
   });
 
   // Upload extensions zip

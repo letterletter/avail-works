@@ -1,6 +1,6 @@
 {
   "name": "@availworks/cli",
-  "version": "0.0.1",
+  "version": "0.0.1-beta.1",
   "description": "AppWorks CLI for develop project/material-collection/component.",
   "main": "bin/appworks.js",
   "bin": {

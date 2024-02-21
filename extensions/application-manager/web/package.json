@@ -13,7 +13,7 @@
     "typescript": "^4.5.2"
   },
   "dependencies": {
-    "@alifd/next": "~1.19.2",
+    "@alifd/next": "1.27.2",
     "@alifd/theme-iceworks-dark": "^1.2.1",
     "@appworks/connector": "^0.1.0",
     "@appworks/constant": "^0.1.0",

@@ -59,6 +59,7 @@
     "@types/tar": "^4.0.3",
     "adm-zip": "^0.4.14",
     "axios": "^0.18.0",
+    "ali-oss": "^6.9.0",
     "chalk": "^4.0.0",
     "codecov": "^3.6.5",
     "cross-spawn": "^7.0.2",

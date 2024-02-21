@@ -1,6 +1,6 @@
 {
   "name": "@availworks/project-utils",
-  "version": "0.0.1",
+  "version": "0.0.1-beta.1",
   "description": "General tool library for AppWorks Project.",
   "files": [
     "lib"
