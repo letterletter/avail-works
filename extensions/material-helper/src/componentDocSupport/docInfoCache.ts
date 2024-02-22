@@ -1,6 +1,5 @@
 /* eslint-disable dot-notation */
 import { IMaterialData, IMaterialComponent, IMaterialBase } from '@appworks/material-utils';
-import { material } from '@appworks/material-engine';
 import { window } from 'vscode';
 import { IComponentDocInfo } from './type';
 import i18n from '../i18n';
@@ -8,7 +7,6 @@ import i18n from '../i18n';
 let loading = true;
 let docInfoCache: IComponentDocInfo[] = [];
 
-const { getSourcesByProjectType, getData } = material;
 
 export function getDocInfos(): IComponentDocInfo[] {
   if (!loading) {
@@ -37,8 +35,8 @@ async function originGetDocInfos() {
     });
   };
 
-  const projectSource = await getSourcesByProjectType();
-  const componentInfos = await Promise.all(projectSource.map(({ source }) => getData(source)));
+  const projectSource = []  //await getSourcesByProjectType();
+  const componentInfos = await Promise.all(projectSource.map(({ source }) => source));
   return componentInfos.reduce((componentDocInfos, materialInfo) => {
     return componentDocInfos.concat(getDocInfoFromMaterial(materialInfo));
   }, [] as IComponentDocInfo[]);

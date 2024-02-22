@@ -1,9 +1,9 @@
 {
   "name": "availworks-app",
-  "displayName": "Application Manager",
+  "displayName": "AvailWorks Application Manager",
   "description": "Quick view your Universal Application(React/Rax/Vue, etc).",
   "publisher": "letterletter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.73.0"
   },
@@ -353,7 +353,6 @@
     "@appworks/common-service": "^0.1.0",
     "@appworks/constant": "^0.1.0",
     "@appworks/i18n": "^0.1.0",
-    "@appworks/material-engine": "^0.2.0",
     "@appworks/project-service": "^0.1.0",
     "@appworks/connector": "^0.1.0",
     "chokidar": "^3.5.1",

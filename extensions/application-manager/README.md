@@ -2,11 +2,6 @@ English | [简体中文](https://github.com/apptools-lab/appworks/blob/master/ex
 
 # Application Manager
 
-[![Version for VS Code Extension](https://vsmarketplacebadge.apphb.com/version-short/iceworks-team.iceworks-app.svg?logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-app)
-[![Installs](https://vsmarketplacebadge.apphb.com/installs-short/iceworks-team.iceworks-app.svg)](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-app)
-[![Rating](https://vsmarketplacebadge.apphb.com/rating-short/iceworks-team.iceworks-app.svg)](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-app)
-[![The MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
-
 Preview and manage your application from a framework perspective, Add **NPM scripts** and **Application dependencies** view to **Explorer Panel**, add **Application Manager Panel** to provide **project dashboard** and **engineering capabilities** (debugging and Publishing), friendly for React and [Rax](https://rax.js.org/).
 
 ## Application Manager Panel

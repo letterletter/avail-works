@@ -2,11 +2,6 @@
 
 # 应用管理器
 
-[![Version for VS Code Extension](https://vsmarketplacebadge.apphb.com/version-short/iceworks-team.iceworks-app.svg?logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-app)
-`[![Installs](https://vsmarketplacebadge.apphb.com/installs-short/iceworks-team.iceworks-app.svg)](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-app)
-[![Rating](https://vsmarketplacebadge.apphb.com/rating-short/iceworks-team.iceworks-app.svg)](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-app)
-[![The MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
-
 从框架视角预览和管理您应用的组织，向资源管理器面板添加 npm 脚本、依赖管理视图，新增应用管理器面板提供项目仪表盘、工程能力（调试、发布）。对 React 和 [Rax](https://rax.js.org/) 应用友好。
 
 ## 应用管理器面板

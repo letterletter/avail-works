@@ -3,13 +3,11 @@ import { connectService, getHtmlForWebview } from '@appworks/connector/lib/vscod
 import { initExtension, registerCommand } from '@appworks/common-service';
 import { autoSetContext as autoSetContextByProject } from '@appworks/project-service';
 import { ICEWORKS_ICON_PATH } from '@appworks/constant';
-import { hookUtil } from '@appworks/material-engine';
 import services from './services/index';
 import propsAutoComplete from './propsAutoComplete';
 import i18n from './i18n';
 import registerComponentDocSupport from './componentDocSupport';
 import recorder from './utils/recorder';
-import { registerDebugCommand } from './utils/debugMaterials';
 import { createComponentsTreeView } from './views/componentsView';
 import { createPagesTreeView } from './views/pagesView';
 import mtopAutoComplete from './mtopAutoComplete';
@@ -117,7 +115,6 @@ export function activate(context: vscode.ExtensionContext) {
     }),
   );
 
-  registerDebugCommand(subscriptions);
 
   propsAutoComplete();
   mtopAutoComplete();
@@ -147,7 +144,7 @@ export function activate(context: vscode.ExtensionContext) {
     });
 
     */
-    registerHook: hookUtil.registerHook,
+    // registerHook: hookUtil.registerHook,
   };
 }
 
