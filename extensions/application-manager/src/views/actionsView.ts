@@ -98,7 +98,7 @@ export class ActionsProvider implements vscode.TreeDataProvider<ItemData> {
     );
     items.push(debugItem);
 
-    if (vscode.extensions.getExtension('iceworks-team.iceworks-material-helper')) {
+    if (vscode.extensions.getExtension('letterletter.availworks-material-helper')) {
       const createPageLabel = i18n.format('extension.applicationManager.showEntriesQuickPick.generatePage.label');
       const createPageItem = this.buildActionItem(
         createPageLabel,

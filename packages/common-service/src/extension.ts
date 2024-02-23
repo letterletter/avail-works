@@ -76,7 +76,7 @@ async function autoStartWelcomePage(globalState: vscode.Memento) {
 
   // if didSetMaterialSource means is installed
   const isFirstInstall = !didShowWelcomePage && !globalState.get(didSetMaterialSourceStateKey);
-  if (isFirstInstall && !vscode.window.activeTextEditor && vscode.extensions.getExtension('iceworks-team.iceworks-app')) {
+  if (isFirstInstall && !vscode.window.activeTextEditor && vscode.extensions.getExtension('letterletter.availworks-app')) {
     vscode.commands.executeCommand('applicationManager.welcome.start');
   }
   globalState.update(didShowWelcomePageStateKey, true);

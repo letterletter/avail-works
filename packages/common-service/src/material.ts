@@ -68,7 +68,7 @@ export const bulkDownloadMaterials = async function (
 };
 
 export function openMaterialsSettings() {
-  if (vscode.extensions.getExtension('iceworks-team.iceworks-app')) {
+  if (vscode.extensions.getExtension('letterletter.availworks-app')) {
     executeCommand('applicationManager.configHelper.start', 'appworks.materialSources');
   } else {
     executeCommand('workbench.action.openSettings', 'appworks.materialSources');

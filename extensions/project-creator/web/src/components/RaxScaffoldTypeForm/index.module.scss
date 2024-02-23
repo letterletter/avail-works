@@ -1,0 +1,18 @@
+.container {
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .title {
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+  }
+
+  .subTitle {
+    margin: 8px 0;
+    font-size: 12px;
+  }
+}

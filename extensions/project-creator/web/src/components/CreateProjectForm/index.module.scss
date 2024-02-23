@@ -1,0 +1,36 @@
+.container {
+  position: relative;
+  width: 100%;
+
+  .form {
+    height: calc(100vh - 160px);
+    width: 400px;
+    margin: 0 auto;
+
+    .folderIcon {
+      cursor: pointer;
+      margin-right: 28px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .optionWrap {
+    position: absolute;
+    top: 160px;
+    left: calc(50vw - 234px);
+
+    .errorMsg {
+      width: 400px;
+      font-size: 13px;
+      color: red;
+      margin-top: 10px;
+    }
+  }
+
+  .action {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

@@ -83,7 +83,7 @@ export default [
       return (
         (await checkIsTargetProjectType()) &&
         !(await checkIsPegasusProject()) &&
-        vscode.extensions.getExtension('iceworks-team.iceworks-material-helper')
+        vscode.extensions.getExtension('letterletter.availworks-material-helper')
       );
     },
   },
@@ -93,7 +93,7 @@ export default [
     command: 'material-helper.material-importer.start',
     async condition() {
       return (
-        (await checkIsTargetProjectType()) && vscode.extensions.getExtension('iceworks-team.iceworks-material-helper')
+        (await checkIsTargetProjectType()) && vscode.extensions.getExtension('letterletter.availworks-material-helper')
       );
     },
   },
@@ -105,7 +105,7 @@ export default [
       return (
         (await checkIsTargetProjectType()) &&
         !(await checkIsPegasusProject()) &&
-        vscode.extensions.getExtension('iceworks-team.iceworks-material-helper')
+        vscode.extensions.getExtension('letterletter.availworks-material-helper')
       );
     },
   },
@@ -115,7 +115,7 @@ export default [
     command: 'material-helper.showMaterialDocs',
     async condition() {
       return (
-        (await checkIsTargetProjectType()) && vscode.extensions.getExtension('iceworks-team.iceworks-material-helper')
+        (await checkIsTargetProjectType()) && vscode.extensions.getExtension('letterletter.availworks-material-helper')
       );
     },
   },

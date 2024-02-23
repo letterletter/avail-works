@@ -1,0 +1,41 @@
+body {
+  padding: 0;
+  margin: 0;
+
+  // the `mask-background` css variables can't be parsed
+  // so update modal component overlay background
+  .next-overlay-wrapper {
+    .next-overlay-backdrop {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  .next-card-header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .next-card-content-container {
+    padding: 0 14px 16px 14px;
+    margin-top: 0;
+    font-size: 12px;
+  }
+
+  .next-form-item-label {
+    label {
+      font-weight: bold;
+      color: white;
+    }
+  }
+
+  .next-form-item-control {
+    span {
+      input {
+        font-size: 12px;
+      }
+      input::-webkit-input-placeholder {
+        font-size: 12px;
+      }
+    }
+  }
+}

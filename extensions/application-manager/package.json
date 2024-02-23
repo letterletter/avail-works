@@ -3,7 +3,7 @@
   "displayName": "AvailWorks Application Manager",
   "description": "Quick view your Universal Application(React/Rax/Vue, etc).",
   "publisher": "letterletter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.73.0"
   },
@@ -364,7 +364,7 @@
     "util": "^0.12.3"
   },
   "extensionDependencies": [
-    "letterletter.availworks-material-helper"
+    "letterletter.availworks-project-creator"
   ],
   "homepage": "https://github.com/apptools-lab/appworks/blob/master/extensions/application-manager/README.md",
   "bugs": {
