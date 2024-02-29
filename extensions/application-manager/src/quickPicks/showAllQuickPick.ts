@@ -7,6 +7,7 @@ const { window, commands } = vscode;
 export default async function showAllQuickPick() {
   const quickPick = window.createQuickPick();
   const entryOptions = await getOptions(options);
+  console.log('entry OPtions', entryOptions);
   quickPick.items = entryOptions;
   quickPick.onDidChangeSelection((selection) => {
     if (selection[0]) {

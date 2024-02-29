@@ -31,8 +31,8 @@
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "iceworksApp",
-          "title": "AppWork2",
+          "id": "availworksApp",
+          "title": "AvailWorks",
           "icon": "assets/dark/registry.svg"
         }
       ]
@@ -50,7 +50,7 @@
           "when": "!appworks:projectIsNotTargetType"
         }
       ],
-      "iceworksApp": [
+      "availworksApp": [
         {
           "id": "welcome",
           "name": "Welcome",
@@ -364,7 +364,8 @@
     "util": "^0.12.3"
   },
   "extensionDependencies": [
-    "letterletter.availworks-project-creator"
+    "letterletter.availworks-project-creator",
+    "letterletter.availworks-create-project"
   ],
   "homepage": "https://github.com/apptools-lab/appworks/blob/master/extensions/application-manager/README.md",
   "bugs": {

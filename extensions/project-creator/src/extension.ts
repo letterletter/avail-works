@@ -17,7 +17,6 @@ export function activate(context: vscode.ExtensionContext) {
   const { extensionPath, subscriptions, globalState } = context;
 
   console.log('Congratulations, your extension "project-creator" is now active!');
-  recorder.recordActivate?.();
 
   // auto set configuration
   initExtension(context);

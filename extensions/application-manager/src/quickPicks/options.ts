@@ -12,7 +12,7 @@ export default [
     detail: i18n.format('extension.applicationManager.showEntriesQuickPick.projectCreator.detail'),
     command: 'project-creator.create-project.start',
     async condition() {
-      return vscode.extensions.getExtension('iceworks-team.iceworks-project-creator');
+      return vscode.extensions.getExtension('letterletter.availworks-project-creator');
     },
   },
   {
@@ -20,7 +20,7 @@ export default [
     detail: i18n.format('extension.applicationManager.showEntriesQuickPick.customScaffold.detail'),
     command: 'project-creator.custom-scaffold.start',
     async condition() {
-      return vscode.extensions.getExtension('iceworks-team.iceworks-project-creator');
+      return vscode.extensions.getExtension('letterletter.availworks-project-creator');
     },
   },
   {
