@@ -43,7 +43,7 @@ function activate(context: vscode.ExtensionContext) {
     connectService(webviewPanel, context, { services });
   };
 
-  registerCommand('.create-pro', () => {
+  registerCommand('.hello', () => {
     openWebview();
   });
 }

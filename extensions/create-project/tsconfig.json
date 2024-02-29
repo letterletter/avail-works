@@ -1,17 +1,10 @@
 {
+  "extends": "../../tsconfig.extension.json",
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es2019",
-    "lib": ["ES2019"],
-    "sourceMap": true,
-    "strict": true ,
+    "rootDir": "./",
     "outDir": "build",
-    "rootDir": "src",
-    "noImplicitAny": false,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true
+    "resolveJsonModule": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "web"]
+  "exclude": [".vscode-test", "web"]
 }

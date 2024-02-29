@@ -7,8 +7,8 @@ const keySecret = 'Wut6ZBdgH735CzV05cZy9ciGfA198Q';
 const ossClient = oss({
   bucket: 'letter-avail-works',
   endpoint: 'oss-cn-hangzhou.aliyuncs.com',
-  accessKeyId: process.env.ACCESS_KEY_ID, // process.env.ACCESS_KEY_ID,
-  accessKeySecret: process.env.ACCESS_KEY_SECRET, //process.env.ACCESS_KEY_SECRET,
+  accessKeyId: keyId, // process.env.ACCESS_KEY_ID, // process.env.ACCESS_KEY_ID,
+  accessKeySecret: keySecret, // process.env.ACCESS_KEY_SECRET, //process.env.ACCESS_KEY_SECRET,
   timeout: '300s',
 });
 

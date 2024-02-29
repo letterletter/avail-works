@@ -41,7 +41,7 @@ async function start() {
     }
 
     // npm install
-    extensionDepsInstall();
+    // extensionDepsInstall();
 
     // Publish
     let publishedCount = 0;
