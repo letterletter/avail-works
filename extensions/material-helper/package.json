@@ -3,7 +3,7 @@
   "displayName": "AvailWorks Component Helper",
   "description": "Easily use Component in React/Vue/Rax.",
   "publisher": "letterletter",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "./build/extension.js",
   "engines": {
     "vscode": "^1.73.0"

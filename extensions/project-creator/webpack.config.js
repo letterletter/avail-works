@@ -3,7 +3,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 const tsConfigPath = path.join(__dirname, 'tsconfig.json');
 const outputPath = path.resolve(__dirname, 'build');
-const scaffoldGeneratorLibPath = path.join(require.resolve('ice-scaffold-generator'), '..');
+// const scaffoldGeneratorLibPath = path.join(require.resolve('ice-scaffold-generator'), '..');
 
 const config = {
   target: 'node',
@@ -46,12 +46,12 @@ const config = {
     ],
   },
   plugins: [
-    new CopyPlugin({
-      patterns: [
-        { from: path.join(scaffoldGeneratorLibPath, 'scaffold'), to: path.join(outputPath, 'scaffold') },
-        { from: path.join(scaffoldGeneratorLibPath, 'template'), to: path.join(outputPath, 'template') },
-      ],
-    }),
+    // new CopyPlugin({
+    //   patterns: [
+    //     { from: path.join(scaffoldGeneratorLibPath, 'scaffold'), to: path.join(outputPath, 'scaffold') },
+    //     { from: path.join(scaffoldGeneratorLibPath, 'template'), to: path.join(outputPath, 'template') },
+    //   ],
+    // }),
   ],
 };
 
