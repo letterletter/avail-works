@@ -26,10 +26,10 @@ async function checkIsShowTip(): Promise<boolean> {
  */
 async function installTypesRax(value: string | undefined, recorder: Recorder) {
   if (value === i18n.format('extension.applicationManager.hintInstallTypesrax.message.install')) {
-    recorder.record({
-      action: 'actualInstall',
-      module: 'hintInstallTypesRax',
-    });
+    // recorder.record({
+    //   action: 'actualInstall',
+    //   module: 'hintInstallTypesRax',
+    // });
     const terminalName = 'install @typesRax';
     const npmCommandAction = getAddDependencyAction();
 
@@ -40,10 +40,10 @@ async function installTypesRax(value: string | undefined, recorder: Recorder) {
 
 export default async (recorder: Recorder) => {
   if (await checkIsShowTip()) {
-    recorder.record({
-      action: 'showInstallTip',
-      module: 'hintInstallTypesRax',
-    });
+    // recorder.record({
+    //   action: 'showInstallTip',
+    //   module: 'hintInstallTypesRax',
+    // });
     vscode.window
       .showInformationMessage(
         i18n.format('extension.applicationManager.hintInstallTypesrax.message'),

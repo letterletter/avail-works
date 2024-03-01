@@ -53,11 +53,11 @@ export function connectService(
           const extra = args.length > 0 ? { data: args.length === 1 ? args[0] : args } : undefined;
           if (recorder) {
             // record for extension
-            recorder.record({
-              module: service,
-              action: method,
-              ...extra,
-            });
+            // recorder.record({
+            //   module: service,
+            //   action: method,
+            //   ...extra,
+            // });
 
             // record for service
             // record({

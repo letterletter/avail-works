@@ -162,19 +162,19 @@ export async function activate(context: vscode.ExtensionContext) {
     const { title } = treeView;
     treeView.onDidChangeVisibility(({ visible }) => {
       if (visible) {
-        recorder.record({
-          module: 'treeView',
-          action: 'visible',
-          data: {
-            title,
-          },
-        });
+        // recorder.record({
+        //   module: 'treeView',
+        //   action: 'visible',
+        //   data: {
+        //     title,
+        //   },
+        // });
       }
 
-      recorder.record({
-        module: 'treeView',
-        action: 'active',
-      });
+      // recorder.record({
+      //   module: 'treeView',
+      //   action: 'active',
+      // });
     });
   });
 

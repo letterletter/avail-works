@@ -173,14 +173,14 @@ export async function createProject(projectField: IProjectField): Promise<string
   const { npm, version } = scaffold.source;
   const registry = getDataFromSettingJson(CONFIGURATION_KEY_NPM_REGISTRY);
   await downloadAndGenerateProject(projectDir, npm, version, registry, projectName, ejsOptions);
-  recorder.record({
-    module: 'project',
-    action: 'create',
-    data: {
-      type,
-      npm,
-    },
-  });
+  // recorder.record({
+  //   module: 'project',
+  //   action: 'create',
+  //   data: {
+  //     type,
+  //     npm,
+  //   },
+  // });
   return projectDir;
 }
 
@@ -206,14 +206,14 @@ export async function createDEFProjectAndCloneRepository(DEFProjectField: IDEFPr
   }
   await createDEFProject(DEFProjectField);
   await cloneRepositoryToLocal(projectDir, group, project);
-  recorder.record({
-    module: 'project',
-    action: 'create',
-    data: {
-      type,
-      npm,
-    },
-  });
+  // recorder.record({
+  //   module: 'project',
+  //   action: 'create',
+  //   data: {
+  //     type,
+  //     npm,
+  //   },
+  // });
   return projectDir;
 }
 

@@ -19,10 +19,10 @@ export async function showUsedComponentDocQuickPicks(uri: vscode.Uri) {
 }
 
 function showQuickPick(quickPickItems: any[]) {
-  recorder.record({
-    module: 'docSupport',
-    action: 'showQuickPick',
-  });
+  // recorder.record({
+  //   module: 'docSupport',
+  //   action: 'showQuickPick',
+  // });
 
   if (quickPickItems.length === 0) {
     vscode.window.showWarningMessage(i18n.format('extension.iceworksMaterialHelper.getComponentQuickPicks.noMaterial'));

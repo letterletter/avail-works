@@ -21,11 +21,11 @@ export default function openInBrowser(url) {
     openInExternalBrowser(url);
   }
 
-  recorder.record({
-    module: 'docSupport',
-    action: 'openInBrowser',
-    data: {
-      url,
-    },
-  });
+  // recorder.record({
+  //   module: 'docSupport',
+  //   action: 'openInBrowser',
+  //   data: {
+  //     url,
+  //   },
+  // });
 }

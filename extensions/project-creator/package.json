@@ -3,9 +3,9 @@
   "displayName": "AvailWorks Application Creator",
   "description": "Quick create a Universal Application(React/Rax/Vue, etc).",
   "publisher": "letterletter",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "engines": {
-    "vscode": "^1.73.0"
+    "vscode": "^1.41.0"
   },
   "categories": [
     "Other"
@@ -65,7 +65,7 @@
   },
   "devDependencies": {
     "@types/node": "16.x",
-    "@types/vscode": "^1.73.0",
+    "@types/vscode": "^1.41.0",
     "copy-webpack-plugin": "^6.4.1",
     "ts-loader": "^7.0.5",
     "webpack": "^4.43.0",
