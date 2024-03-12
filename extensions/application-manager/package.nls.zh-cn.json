@@ -8,6 +8,7 @@
   "applicationManager.viewsWelcome.nodeDependencies.contents": "未找到依赖",
   "applicationManager.command.configHelper.start.title": "AppWorks: 设置",
   "applicationManager.command.welcome.start.title": "AppWorks: 欢迎",
+  "applicationManager.command.pluginManage.start.title": "插件测试管理",
   "applicationManager.command.dashboard.start.title": "AppWorks: 项目仪表盘",
   "applicationManager.command.DefPublish.title": "AppWorks: DEF 发布",
   "applicationManager.command.quickEntries.start.title": "启动",

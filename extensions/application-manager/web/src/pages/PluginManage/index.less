@@ -1,0 +1,73 @@
+.plugin-management {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    min-width: 225px;
+
+    &:hover {
+        background: var(--vscode-list-hoverBackground);
+    }
+
+    .item-container {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        padding: 8px 16px;
+        overflow: hidden;
+
+        .img-container {
+            flex: 0 0 40px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .title-container {
+            flex: 1;
+            margin-left: 16px;
+            overflow: hidden;
+
+            .title {
+                font-weight: 700;
+                color: var(--vscode-editor-foreground);
+            }
+
+            .desc {
+                margin-bottom: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                color: var(--vscode-editor-foreground);
+            }
+        }
+    }
+    .config-container {
+        position: absolute;
+        right: 16px;
+        top: 8px;
+        font-size: 13px;
+        cursor: pointer;
+        color: var(--vscode-editor-foreground);
+
+        &:hover {
+            color: var(--vscode-button-hoverBackground);
+        }
+    }
+
+    .button-container {
+        margin: 0 16px 8px 0;
+        border-radius: 2px;
+        padding: 0 4px;
+        line-height: 16px;
+        font-size: 12px;
+        background-color: var(--vscode-extensionButton-prominentBackground);
+        color: var(--vscode-extensionButton-prominentForeground);
+        cursor: pointer;
+
+        &:hover {
+            background: var(--vscode-button-hoverBackground);
+        }
+    }
+}

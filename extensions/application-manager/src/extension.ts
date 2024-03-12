@@ -11,6 +11,7 @@ import { ICEWORKS_ICON_PATH } from '@appworks/constant';
 import { checkIsO2, initExtension, registerCommand, getFolderExistsTime, getDataFromSettingJson } from '@appworks/common-service';
 import { createActionsTreeView } from './views/actionsView';
 import { createNodeDependenciesTreeView } from './views/nodeDependenciesView';
+import { PluginManagement } from './views/PluginManagement';
 import { createQuickEntriesTreeView } from './views/quickEntriesView';
 import services from './services';
 import { showExtensionsQuickPickCommandId, projectExistsTime } from './constants';
@@ -39,6 +40,9 @@ export async function activate(context: vscode.ExtensionContext) {
   // auto set configuration & context
   initExtension(context);
   autoSetContextByProject();
+
+  const pluginManage = new PluginManagement(context);
+  pluginManage.activate();
 
   // init statusBarItem
   const extensionsStatusBar = createExtensionsStatusBar();
@@ -152,6 +156,37 @@ export async function activate(context: vscode.ExtensionContext) {
       activeDashboardWebview();
     }),
   );
+
+
+  let pluginManageWebviewPanel: vscode.WebviewPanel | undefined;
+  function activepluginManageWebviewPanelWebview() {
+    if (pluginManageWebviewPanel) {
+      pluginManageWebviewPanel.reveal();
+    } else {
+      pluginManageWebviewPanel = window.createWebviewPanel(
+        'appworks',
+        i18n.format('extension.applicationManager.dashboard.extension.webviewTitle'),
+        ViewColumn.One,
+        {
+          enableScripts: true,
+          retainContextWhenHidden: true,
+        },
+      );
+      pluginManageWebviewPanel.webview.html = getHtmlForWebview(extensionPath, 'pluginmanage');
+      pluginManageWebviewPanel.iconPath = vscode.Uri.parse(ICEWORKS_ICON_PATH);
+      pluginManageWebviewPanel.onDidDispose(
+        () => {
+          dashboardWebviewPanel = undefined;
+        },
+        null,
+        context.subscriptions,
+      );
+      connectService(pluginManageWebviewPanel, context, { services, recorder });
+    }
+  }
+  subscriptions.push(registerCommand('applicationManager.pluginManage.start', () => {
+    activepluginManageWebviewPanelWebview();
+  }))
 
   // init tree view
   const treeViews: any[] = [];

@@ -15,6 +15,7 @@
   "dependencies": {
     "@alifd/next": "1.27.2",
     "@alifd/theme-iceworks-dark": "^1.2.1",
+    "@ant-design/icons": "^5.3.1",
     "@appworks/connector": "^0.1.0",
     "@appworks/constant": "^0.1.0",
     "@appworks/doctor-ui": "^0.1.0",
@@ -33,7 +34,7 @@
     "throttle-debounce": "^2.2.1"
   },
   "scripts": {
-    "start": "icejs start --disable-reload",
+    "start": "icejs start",
     "build": "icejs build"
   },
   "engines": {
