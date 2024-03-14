@@ -41,24 +41,12 @@
         "title": "%iceworksMaterialHelper.commands.componentCreator.start.title%"
       },
       {
-        "command": "material-helper.page-generator.start",
-        "title": "%iceworksMaterialHelper.commands.pageGenerator.start.title%"
-      },
-      {
         "command": "appworks-material-helper.debug-materials.start",
         "title": "%iceworksMaterialHelper.commands.debugMaterials.start.title%"
       },
       {
         "command": "material-helper.showMaterialDocs",
         "title": "%iceworksMaterialHelper.commands.showAllMaterialQuickPicks.title%"
-      },
-      {
-        "command": "material-helper.showMaterialDocsForCurrentFile",
-        "title": "%iceworksMaterialHelper.commands.showDocumentMaterialQuickPicks.title%",
-        "icon": {
-          "light": "assets/light/file_search.svg",
-          "dark": "assets/dark/file_search.svg"
-        }
       },
       {
         "command": "material-helper.pages.add",
@@ -68,26 +56,7 @@
           "dark": "assets/dark/add.svg"
         }
       },
-      {
-        "command": "material-helper.pages.refresh",
-        "title": "%iceworksMaterialHelper.command.pages.refresh.title%",
-        "icon": {
-          "light": "assets/light/refresh.svg",
-          "dark": "assets/dark/refresh.svg"
-        }
-      },
-      {
-        "command": "material-helper.pages.openFile",
-        "title": "%iceworksMaterialHelper.command.pages.openFile.title%"
-      },
-      {
-        "command": "material-helper.pages.delete",
-        "title": "%iceworksMaterialHelper.command.pages.delete.title%",
-        "icon": {
-          "light": "assets/light/delete.svg",
-          "dark": "assets/dark/delete.svg"
-        }
-      },
+
       {
         "command": "material-helper.components.add",
         "title": "%iceworksMaterialHelper.command.components.add.title%",
@@ -103,38 +72,10 @@
           "light": "assets/light/refresh.svg",
           "dark": "assets/dark/refresh.svg"
         }
-      },
-      {
-        "command": "material-helper.components.delete",
-        "title": "%iceworksMaterialHelper.command.components.delete.title%",
-        "icon": {
-          "light": "assets/light/delete.svg",
-          "dark": "assets/dark/delete.svg"
-        }
-      },
-      {
-        "command": "material-helper.components.openFile",
-        "title": "%iceworksMaterialHelper.command.components.openFile.title%"
       }
     ],
     "menus": {
       "commandPalette": [
-        {
-          "command": "material-helper.pages.add",
-          "when": "false"
-        },
-        {
-          "command": "material-helper.pages.refresh",
-          "when": "false"
-        },
-        {
-          "command": "material-helper.pages.openFile",
-          "when": "false"
-        },
-        {
-          "command": "material-helper.pages.delete",
-          "when": "false"
-        },
         {
           "command": "material-helper.components.add",
           "when": "false"
@@ -157,11 +98,6 @@
           "command": "material-helper.components.add",
           "when": "!appworks:projectIsNotTargetType",
           "group": "appworks@1"
-        },
-        {
-          "command": "material-helper.pages.add",
-          "when": "!appworks:projectIsNotTargetType",
-          "group": "appworks@2"
         }
       ],
       "editor/context": [
@@ -189,16 +125,6 @@
         }
       ],
       "view/title": [
-        {
-          "command": "material-helper.pages.add",
-          "when": "view == pages",
-          "group": "navigation"
-        },
-        {
-          "command": "material-helper.pages.refresh",
-          "when": "view == pages",
-          "group": "navigation"
-        },
         {
           "command": "material-helper.components.add",
           "when": "view == components",
@@ -234,21 +160,12 @@
     },
     "viewsWelcome": [
       {
-        "view": "pages",
-        "contents": "%iceworksMaterialHelper.viewsWelcome.pages.contents%"
-      },
-      {
         "view": "components",
         "contents": "%iceworksMaterialHelper.viewsWelcome.components.contents%"
       }
     ],
     "views": {
       "availworksApp": [
-        {
-          "id": "pages",
-          "name": "%iceworksMaterialHelper.view.pages.name%",
-          "when": "!appworks:projectIsNotTargetFramework && !appworks:projectIsPegasus"
-        },
         {
           "id": "components",
           "name": "%iceworksMaterialHelper.view.components.name%",
@@ -312,11 +229,6 @@
             "https://registry.npmmirror.com"
           ],
           "description": "%iceworksMaterialHelper.configuration.properties.appworks.npmRegistry.description%"
-        },
-        "appworks.generatePagePath": {
-          "type": "string",
-          "default": "",
-          "description": "%iceworksMaterialHelper.configuration.properties.appworks.generatePagePath.description%"
         },
         "appworks.generateComponentPath": {
           "type": "string",

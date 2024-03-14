@@ -4,15 +4,10 @@ import { initExtension, registerCommand } from '@appworks/common-service';
 import { autoSetContext as autoSetContextByProject } from '@appworks/project-service';
 import { ICEWORKS_ICON_PATH } from '@appworks/constant';
 import services from './services/index';
-import propsAutoComplete from './propsAutoComplete';
 import i18n from './i18n';
-import registerComponentDocSupport from './componentDocSupport';
 import recorder from './utils/recorder';
 import { createComponentsTreeView } from './views/componentsView';
 import { createPagesTreeView } from './views/pagesView';
-import mtopAutoComplete from './mtopAutoComplete';
-import importAutoComplete from './importAutoComplete';
-import propTypesAutoComplete from './propTypesAutoComplete';
 
 const { window, ViewColumn } = vscode;
 
@@ -74,50 +69,9 @@ export function activate(context: vscode.ExtensionContext) {
     }),
   );
 
-  function activeComponentCreatorWebview() {
-    const webviewPanel: vscode.WebviewPanel = window.createWebviewPanel(
-      'appworks',
-      i18n.format('extension.iceworksMaterialHelper.componentCreator.webviewTitle'),
-      ViewColumn.One,
-      {
-        enableScripts: true,
-        retainContextWhenHidden: true,
-      },
-    );
-    webviewPanel.webview.html = getHtmlForWebview(extensionPath, 'componentcreator');
-    webviewPanel.iconPath = vscode.Uri.parse(ICEWORKS_ICON_PATH);
-    connectService(webviewPanel, context, { services, recorder });
-  }
-  subscriptions.push(
-    registerCommand('material-helper.component-creator.start', () => {
-      activeComponentCreatorWebview();
-    }),
-  );
-
-  function activePageGeneratorWebview() {
-    const webviewPanel: vscode.WebviewPanel = window.createWebviewPanel(
-      'appworks',
-      i18n.format('extension.iceworksMaterialHelper.pageGenerator.webViewTitle'),
-      ViewColumn.One,
-      {
-        enableScripts: true,
-        retainContextWhenHidden: true,
-      },
-    );
-    webviewPanel.webview.html = getHtmlForWebview(extensionPath, 'pagegenerator');
-    webviewPanel.iconPath = vscode.Uri.parse(ICEWORKS_ICON_PATH);
-    connectService(webviewPanel, context, { services, recorder });
-  }
-  subscriptions.push(
-    registerCommand('material-helper.page-generator.start', () => {
-      activePageGeneratorWebview();
-    }),
-  );
-
 
   propsAutoComplete();
   mtopAutoComplete();
-  registerComponentDocSupport();
 
   // views
   createComponentsTreeView(context);
@@ -129,21 +83,6 @@ export function activate(context: vscode.ExtensionContext) {
 
   // exports
   return {
-    /*
-    example:
-
-    hookUtil.registerHook('block.addBlockCode', (data, args) => {
-      console.log('block.addBlockCode', JSON.stringify(data), JSON.stringify(args));
-    });
-    hookUtil.registerHook('component.addCode', (data, args) => {
-      console.log('component.addCode', JSON.stringify(data), JSON.stringify(args));
-    });
-    hookUtil.registerHook('page.generate', (data, args) => {
-      console.log('page.generate', JSON.stringify(data), JSON.stringify(args));
-    });
-
-    */
-    // registerHook: hookUtil.registerHook,
   };
 }
 

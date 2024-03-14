@@ -3,7 +3,6 @@ import { useIntl } from 'react-intl';
 import { Form, Input } from '@alifd/next';
 import { IProjectField } from '@/types';
 import folderIcon from '@/assets/folder.svg';
-import RaxScaffoldTypeForm from '../RaxScaffoldTypeForm';
 import styles from './index.module.scss';
 
 interface IProjectFormProps {
@@ -65,12 +64,6 @@ const CreateProjectForm: React.FC<IProjectFormProps> = ({
           <div className={styles.action}>{children}</div>
         </Form.Item>
       </Form>
-      <div className={styles.optionWrap}>
-        {value.source && value.source.type === 'rax' && (
-          <RaxScaffoldTypeForm onChange={onChange} value={value} disabled={loading} />
-        )}
-        {errorMsg && <div className={styles.errorMsg}>{errorMsg}</div>}
-      </div>
     </div>
   );
 };
