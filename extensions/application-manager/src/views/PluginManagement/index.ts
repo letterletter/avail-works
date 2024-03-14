@@ -17,7 +17,7 @@ class PluginManagement {
      * @static
      * @memberof PluginManagement
      */
-    static readonly id = 'plugin-management';
+    static readonly id = 'avail-plugin-management';
 
     /**
      * 子插件前缀 ID

@@ -60,7 +60,12 @@
         {
           "id": "quickEntries",
           "name": "%applicationManager.view.quickEntries.name%"
-        }
+        },
+        {
+          "id": "avail-plugin-management",
+          "name": "%applicationManager.view.pluginManagement.name%",
+          "type": "webview"
+        },
       ]
     },
     "viewsWelcome": [
@@ -79,6 +84,10 @@
       {
         "view": "nodeDependencies",
         "contents": "%applicationManager.viewsWelcome.nodeDependencies.contents%"
+      },
+      {
+        "view": "avail-plugin-management",
+        "contents": "插件管理"
       }
     ],
     "commands": [
@@ -207,12 +216,12 @@
         }
       },
       {
-        "command": "plugin-management.refresh",
+        "command": "avail-plugin-management.refresh",
         "title": "刷新",
         "icon": "assets/light/upgrade.svg"
     },
     {
-        "command": "plugin-management.openConfig",
+        "command": "avail-plugin-management.openConfig",
         "title": "配置插件",
         "icon": "assets/light/setting.svg"
     }

@@ -1,3 +1,4 @@
+/* eslint-disable no-new */
 import * as vscode from 'vscode';
 import { window, ViewColumn } from 'vscode';
 import { connectService, getHtmlForWebview } from '@appworks/connector/lib/vscode';
@@ -20,6 +21,8 @@ import autoOpenPreview from './utils/preview/autoOpenPreview';
 import createScriptsCommands from './utils/createScriptsCommands';
 import createExtensionsStatusBar from './statusBar/createExtensionsStatusBar';
 import hintInstallTypesRax from './hintInstallTypesRax';
+// import { TestView } from './views/testView';
+// import { TestView2 } from './views/testView2';
 import i18n from './i18n';
 
 // eslint-disable-next-line

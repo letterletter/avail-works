@@ -9,7 +9,7 @@ import {
   ProgressLocation,
   Webview,
 } from 'vscode';
-import {  getHtmlForWebview  as originGetHtmlForWebview} from '@appworks/connector/lib/vscode';
+import { getHtmlForWebview as originGetHtmlForWebview } from '@appworks/connector/lib/vscode';
 
 import { NotificationType, RequestType } from 'vscode-jsonrpc';
 // import { PostMessageServer, WebviewIpcRequestMessage } from '@ad/postmessage-server';
@@ -35,36 +35,36 @@ const mockList = [
     pluginLinkId: '',
     /** 跳转类型：插件、webview、link */
     pluginLinkType: OPEN_TYPE.extension,
-    /** 配置入口 ID*/
+    /** 配置入口 ID */
     pluginConfigId: '',
-    /** 配置入口跳转类型*/
+    /** 配置入口跳转类型 */
     pluginConfigType: OPEN_TYPE.extension,
     pluginShowEntryConfKey: '',
-},
-{
+  },
+  {
   /** 插件作者 */
-  pluginAuthor: 'letterletter',
-  /** 插件描述 */
-  pluginDesc: '创建',
-  /** 插件icon */
-  pluginIcon: '',
-  /** 插件 ID */
-  pluginAppId: 'letterletter.availworks-project-creator',
-  /** 插件名称 */
-  pluginName: '',
-  /** 类型枚举：内置:1 第三方:2 */
-  pluginType: PluginTypeEnum.INTEGRATION,
-  /** 跳转 ID */
-  pluginLinkId: '',
-  /** 跳转类型：插件、webview、link */
-  pluginLinkType: OPEN_TYPE.extension,
-  /** 配置入口 ID*/
-  pluginConfigId: '',
-  /** 配置入口跳转类型*/
-  pluginConfigType: OPEN_TYPE.extension,
-  pluginShowEntryConfKey: '',
-}
-]
+    pluginAuthor: 'letterletter',
+    /** 插件描述 */
+    pluginDesc: '创建',
+    /** 插件icon */
+    pluginIcon: '',
+    /** 插件 ID */
+    pluginAppId: 'letterletter.availworks-project-creator',
+    /** 插件名称 */
+    pluginName: '',
+    /** 类型枚举：内置:1 第三方:2 */
+    pluginType: PluginTypeEnum.INTEGRATION,
+    /** 跳转 ID */
+    pluginLinkId: '',
+    /** 跳转类型：插件、webview、link */
+    pluginLinkType: OPEN_TYPE.extension,
+    /** 配置入口 ID */
+    pluginConfigId: '',
+    /** 配置入口跳转类型 */
+    pluginConfigType: OPEN_TYPE.extension,
+    pluginShowEntryConfKey: '',
+  },
+];
 /**
  * 插件管理视图数据源提供类
  * @class PluginManagementViewProvider
@@ -90,7 +90,6 @@ class PluginManagementViewProvider implements WebviewViewProvider {
         PluginManagementViewProvider.pluginList = await getAllSubPluginListApi();
         // mockList
         PluginManagementViewProvider.pluginList = mockList;
-
       }
 
       const subPluginList = PluginManagementViewProvider.pluginList.map((item) => {
@@ -292,7 +291,7 @@ class PluginManagementViewProvider implements WebviewViewProvider {
      * @memberof PluginManagementViewProvider
      */
     private getHtmlForWebview(webview: Webview) {
-      return originGetHtmlForWebview(extensionPath, 'pluginmanagement')
+      return originGetHtmlForWebview(extensionPath, 'pluginmanage');
       // return View.getHtml(this.extensionUri, this.id, webview, {});
     }
 }

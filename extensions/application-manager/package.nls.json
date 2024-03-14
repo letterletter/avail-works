@@ -8,6 +8,7 @@
   "applicationManager.viewsWelcome.nodeDependencies.contents": "Node dependencies could not be found in package.json",
   "applicationManager.command.configHelper.start.title": "AppWorks: Settings",
   "applicationManager.command.welcome.start.title": "AppWorks: Welcome",
+  "applicationManager.view.pluginManagement.name": "AvailWorks: Plugin",
   "applicationManager.command.pluginManage.start.title": "PluginManage",
   "applicationManager.command.dashboard.start.title": "AppWorks: Dashboard",
   "applicationManager.command.DefPublish.title": "AppWorks: DEF Publish",
