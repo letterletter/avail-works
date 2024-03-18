@@ -10,8 +10,6 @@ import autoStart from '../utils/autoStart';
 const entryOptions = options.filter(({ command }) => {
   return [
     'project-creator.create-project.start',
-    'applicationManager.dashboard.start',
-    'doctor.dashboard',
     'applicationManager.configHelper.start',
   ].includes(command);
 }).concat([

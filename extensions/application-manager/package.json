@@ -24,7 +24,6 @@
     "onView:scripts",
     "onCommand:applicationManager.configHelper.start",
     "onCommand:applicationManager.welcome.start",
-    "onCommand:applicationManager.dashboard.start",
     "onCommand:applicationManager.pluginManage.start"
   ],
   "main": "./build/extension.js",
@@ -62,10 +61,15 @@
           "name": "%applicationManager.view.quickEntries.name%"
         },
         {
+          "id": "plugin-list-provider",
+          "name": "测试列表入口",
+          "type": "webview"
+        },
+        {
           "id": "avail-plugin-management",
           "name": "%applicationManager.view.pluginManagement.name%",
           "type": "webview"
-        },
+        }
       ]
     },
     "viewsWelcome": [

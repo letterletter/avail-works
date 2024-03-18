@@ -10,7 +10,6 @@
   "applicationManager.view.pluginManagement.name": "AvailWorks: 插件管理",
   "applicationManager.command.welcome.start.title": "AppWorks: 欢迎",
   "applicationManager.command.pluginManage.start.title": "插件测试管理",
-  "applicationManager.command.dashboard.start.title": "AppWorks: 项目仪表盘",
   "applicationManager.command.DefPublish.title": "AppWorks: DEF 发布",
   "applicationManager.command.quickEntries.start.title": "启动",
   "applicationManager.command.npmScripts.refresh.title": "刷新",

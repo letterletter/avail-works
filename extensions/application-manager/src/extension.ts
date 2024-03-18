@@ -7,45 +7,30 @@ import {
   autoSetContext as autoSetContextByProject,
   projectPath,
 } from '@appworks/project-service';
-// import { Recorder } from '@appworks/recorder';
 import { ICEWORKS_ICON_PATH } from '@appworks/constant';
 import { checkIsO2, initExtension, registerCommand, getFolderExistsTime, getDataFromSettingJson } from '@appworks/common-service';
 import { createActionsTreeView } from './views/actionsView';
 import { createNodeDependenciesTreeView } from './views/nodeDependenciesView';
-import { PluginManagement } from './views/PluginManagement';
 import { createQuickEntriesTreeView } from './views/quickEntriesView';
 import services from './services';
 import { showExtensionsQuickPickCommandId, projectExistsTime } from './constants';
 import showAllQuickPick from './quickPicks/showAllQuickPick';
-import autoOpenPreview from './utils/preview/autoOpenPreview';
 import createScriptsCommands from './utils/createScriptsCommands';
 import createExtensionsStatusBar from './statusBar/createExtensionsStatusBar';
-import hintInstallTypesRax from './hintInstallTypesRax';
-// import { TestView } from './views/testView';
-// import { TestView2 } from './views/testView2';
 import i18n from './i18n';
 
 // eslint-disable-next-line
 const { name, version } = require('../package.json');
 // const recorder = new Recorder(name, version);
-const recorder = {}
+const recorder = {};
 export async function activate(context: vscode.ExtensionContext) {
   const { subscriptions, extensionPath } = context;
 
-  if (checkIsO2()) {
-    // only auto open preview in O2
-    autoOpenPreview(context, recorder);
-  }
-
-  console.log('Congratulations, your extension "application-manager" is now active!');
-  // recorder.recordActivate();
+  console.log('Congratulations, your extension "application-manager" is now active!', extensionPath);
 
   // auto set configuration & context
   initExtension(context);
   autoSetContextByProject();
-
-  const pluginManage = new PluginManagement(context);
-  pluginManage.activate();
 
   // init statusBarItem
   const extensionsStatusBar = createExtensionsStatusBar();
@@ -127,69 +112,8 @@ export async function activate(context: vscode.ExtensionContext) {
     }),
   );
 
-  // init dashboard webview
-  let dashboardWebviewPanel: vscode.WebviewPanel | undefined;
-  function activeDashboardWebview() {
-    if (dashboardWebviewPanel) {
-      dashboardWebviewPanel.reveal();
-    } else {
-      dashboardWebviewPanel = window.createWebviewPanel(
-        'appworks',
-        i18n.format('extension.applicationManager.dashboard.extension.webviewTitle'),
-        ViewColumn.One,
-        {
-          enableScripts: true,
-          retainContextWhenHidden: true,
-        },
-      );
-      dashboardWebviewPanel.webview.html = getHtmlForWebview(extensionPath, 'dashboard');
-      dashboardWebviewPanel.iconPath = vscode.Uri.parse(ICEWORKS_ICON_PATH);
-      dashboardWebviewPanel.onDidDispose(
-        () => {
-          dashboardWebviewPanel = undefined;
-        },
-        null,
-        context.subscriptions,
-      );
-      connectService(dashboardWebviewPanel, context, { services, recorder });
-    }
-  }
-  subscriptions.push(
-    registerCommand('applicationManager.dashboard.start', () => {
-      activeDashboardWebview();
-    }),
-  );
-
 
   let pluginManageWebviewPanel: vscode.WebviewPanel | undefined;
-  function activepluginManageWebviewPanelWebview() {
-    if (pluginManageWebviewPanel) {
-      pluginManageWebviewPanel.reveal();
-    } else {
-      pluginManageWebviewPanel = window.createWebviewPanel(
-        'appworks',
-        i18n.format('extension.applicationManager.dashboard.extension.webviewTitle'),
-        ViewColumn.One,
-        {
-          enableScripts: true,
-          retainContextWhenHidden: true,
-        },
-      );
-      pluginManageWebviewPanel.webview.html = getHtmlForWebview(extensionPath, 'pluginmanage');
-      pluginManageWebviewPanel.iconPath = vscode.Uri.parse(ICEWORKS_ICON_PATH);
-      pluginManageWebviewPanel.onDidDispose(
-        () => {
-          dashboardWebviewPanel = undefined;
-        },
-        null,
-        context.subscriptions,
-      );
-      connectService(pluginManageWebviewPanel, context, { services, recorder });
-    }
-  }
-  subscriptions.push(registerCommand('applicationManager.pluginManage.start', () => {
-    activepluginManageWebviewPanelWebview();
-  }))
 
   // init tree view
   const treeViews: any[] = [];
@@ -199,20 +123,7 @@ export async function activate(context: vscode.ExtensionContext) {
   treeViews.forEach((treeView) => {
     const { title } = treeView;
     treeView.onDidChangeVisibility(({ visible }) => {
-      if (visible) {
-        // recorder.record({
-        //   module: 'treeView',
-        //   action: 'visible',
-        //   data: {
-        //     title,
-        //   },
-        // });
-      }
-
-      // recorder.record({
-      //   module: 'treeView',
-      //   action: 'active',
-      // });
+      console.log('changeVisible --- ', visible);
     });
   });
 
@@ -228,9 +139,6 @@ export async function activate(context: vscode.ExtensionContext) {
       // globalState.update(didShowWelcomePageBySidebarStateKey, true);
     }
   }
-
-  // if rax-ts project is uninstalled @types/rax, hint user install it;
-  hintInstallTypesRax(recorder);
 }
 
 export function deactivate() { }

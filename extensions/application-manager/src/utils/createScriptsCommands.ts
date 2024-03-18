@@ -2,7 +2,6 @@ import * as vscode from 'vscode';
 import { createNpmCommand, checkPathExists, registerCommand } from '@appworks/common-service';
 import { dependencyDir, projectPath } from '@appworks/project-service';
 import openPreviewWebview from './preview/openPreviewWebview';
-import showDefPublishEnvQuickPick from '../quickPicks/showDefPublishEnvQuickPick';
 import runScript from '../terminal/runScript';
 
 export default async function createScriptsCommands(context: vscode.ExtensionContext, recorder) {
@@ -33,9 +32,5 @@ export default async function createScriptsCommands(context: vscode.ExtensionCon
     }
 
     runScript(title, projectPath, npmBuildCommand);
-  });
-
-  registerCommand('applicationManager.scripts.DefPublish', () => {
-    showDefPublishEnvQuickPick();
   });
 }

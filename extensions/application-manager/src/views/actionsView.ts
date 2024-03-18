@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/member-ordering */
 import * as vscode from 'vscode';
 import * as fse from 'fs-extra';
 import * as path from 'path';
-import { createNpmCommand, checkPathExists, registerCommand, checkIsAliInternal } from '@appworks/common-service';
+import { createNpmCommand, checkPathExists, registerCommand } from '@appworks/common-service';
 import { dependencyDir, packageJSONFilename, projectPath } from '@appworks/project-service';
 import runScript from '../terminal/runScript';
 import stopScript from '../terminal/stopScript';
@@ -52,6 +53,7 @@ export class ActionsProvider implements vscode.TreeDataProvider<ItemData> {
     return itemDataList;
   }
 
+  // eslint-disable-next-line @typescript-eslint/member-ordering
   private buildActionItem(
     label: string,
     tooltip: string,
@@ -112,32 +114,17 @@ export class ActionsProvider implements vscode.TreeDataProvider<ItemData> {
       items.push(createPageItem);
     }
 
-    const isAliInternal = await checkIsAliInternal();
-    if (isAliInternal) {
-      const publishLabel = i18n.format('extension.applicationManager.showEntriesQuickPick.DefPublish.label');
-      const publishItem = this.buildActionItem(
-        publishLabel,
-        i18n.format('extension.applicationManager.showEntriesQuickPick.DefPublish.detail'),
-        'publish.svg',
-        {
-          command: 'applicationManager.scripts.DefPublish',
-          title: publishLabel,
-        },
-      );
-      items.push(publishItem);
-    } else {
-      const buildLabel = i18n.format('extension.applicationManager.showEntriesQuickPick.runBuild.label');
-      const buildItem = this.buildActionItem(
-        buildLabel,
-        i18n.format('extension.applicationManager.showEntriesQuickPick.runBuild.detail'),
-        'build.svg',
-        {
-          command: 'applicationManager.scripts.runBuild',
-          title: buildLabel,
-        },
-      );
-      items.push(buildItem);
-    }
+    const buildLabel = i18n.format('extension.applicationManager.showEntriesQuickPick.runBuild.label');
+    const buildItem = this.buildActionItem(
+      buildLabel,
+      i18n.format('extension.applicationManager.showEntriesQuickPick.runBuild.detail'),
+      'build.svg',
+      {
+        command: 'applicationManager.scripts.runBuild',
+        title: buildLabel,
+      },
+    );
+    items.push(buildItem);
 
     return items;
   }

@@ -69,17 +69,9 @@ export function activate(context: vscode.ExtensionContext) {
     }),
   );
 
-
-  propsAutoComplete();
-  mtopAutoComplete();
-
   // views
   createComponentsTreeView(context);
   createPagesTreeView(context);
-
-  importAutoComplete();
-  // help user complete React Component's propTypes;
-  propTypesAutoComplete();
 
   // exports
   return {

@@ -23,15 +23,6 @@ export default [
       return vscode.extensions.getExtension('letterletter.availworks-project-creator');
     },
   },
-  {
-    label: i18n.format('extension.applicationManager.showEntriesQuickPick.dashboard.label'),
-    detail: i18n.format('extension.applicationManager.showEntriesQuickPick.dashboard.detail'),
-    command: 'applicationManager.dashboard.start',
-    async condition() {
-      const isTargetProjectType = await checkIsTargetProjectType();
-      return isTargetProjectType;
-    },
-  },
   // {
   //   label: i18n.format('extension.applicationManager.showEntriesQuickPick.welcomePage.label'),
   //   detail: i18n.format('extension.applicationManager.showEntriesQuickPick.welcomePage.detail'),

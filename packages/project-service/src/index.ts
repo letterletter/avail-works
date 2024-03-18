@@ -9,7 +9,6 @@ import {
   getProjectFramework as originGetProjectFramework,
 } from '@appworks/project-utils';
 import * as simpleGit from 'simple-git/promise';
-// import { Recorder } from '@appworks/recorder';
 import * as path from 'path';
 import { ALI_GITLAB_URL, ALI_DIP_PRO, ALI_DEF_WORK_URL } from '@appworks/constant';
 import { projectPath, jsxFileExtnames } from './constant';
@@ -23,10 +22,6 @@ export * from './constant';
 export * from './dependency';
 
 const { name: pkgName, version: pkgVersion } = require('../package.json');
-
-const recorder = {
-  record:(data: any) => {}
-}  // new Recorder(pkgName, pkgVersion);
 
 export async function autoSetContext() {
   const isPegasus = await checkIsPegasusProject();
@@ -173,14 +168,6 @@ export async function createProject(projectField: IProjectField): Promise<string
   const { npm, version } = scaffold.source;
   const registry = getDataFromSettingJson(CONFIGURATION_KEY_NPM_REGISTRY);
   await downloadAndGenerateProject(projectDir, npm, version, registry, projectName, ejsOptions);
-  // recorder.record({
-  //   module: 'project',
-  //   action: 'create',
-  //   data: {
-  //     type,
-  //     npm,
-  //   },
-  // });
   return projectDir;
 }
 
@@ -206,14 +193,6 @@ export async function createDEFProjectAndCloneRepository(DEFProjectField: IDEFPr
   }
   await createDEFProject(DEFProjectField);
   await cloneRepositoryToLocal(projectDir, group, project);
-  // recorder.record({
-  //   module: 'project',
-  //   action: 'create',
-  //   data: {
-  //     type,
-  //     npm,
-  //   },
-  // });
   return projectDir;
 }
 

@@ -52,20 +52,6 @@ export function connectService(
         try {
           const extra = args.length > 0 ? { data: args.length === 1 ? args[0] : args } : undefined;
           if (recorder) {
-            // record for extension
-            // recorder.record({
-            //   module: service,
-            //   action: method,
-            //   ...extra,
-            // });
-
-            // record for service
-            // record({
-            //   namespace: `@appworks/${service}-service`,
-            //   module: 'callMethod',
-            //   action: method,
-            //   ...extra,
-            // });
           }
 
           // set the optional param to undefined

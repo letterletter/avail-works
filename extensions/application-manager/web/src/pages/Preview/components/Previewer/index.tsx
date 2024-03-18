@@ -4,7 +4,6 @@ import LoadingPercent from '../LoadingPercent';
 import { Context } from '../../context';
 import { BLANK_URL } from '../../config';
 import styles from './index.module.scss';
-import MobileDeviceToolbar from './components/MobileDeviceToolbar';
 import { RESPONSIVE_DEVICE, FULL_SCREEN, DEVICE_PREVIEW_MARGIN } from '../../../../constants';
 import { convertNumToPixel, convertPixelToNum, throttle } from '../../utils';
 
@@ -132,12 +131,6 @@ function Previewer(props, ref) {
     <Context.Provider value={{ ...useContext(Context), deviceData, autoSetDeviceConfig, device, setDevice }}>
       <div className={styles.container}>
         <LoadingPercent ref={loadingPercentRef} />
-        <MobileDeviceToolbar
-          deviceHeight={convertPixelToNum(deviceHeight)}
-          deviceWidth={convertPixelToNum(deviceWidth)}
-          useMobileDevice={useMobileDevice}
-          scrollingRatio={scalingRatio}
-        />
         <div className={styles.frameContainer} style={{ height: getDeviceContainerHeight() }}>
           <Rnd
             size={{ width: deviceWidth, height: deviceHeight }}

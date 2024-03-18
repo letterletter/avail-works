@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { LocaleProvider } from '@/i18n';
-import Header from './components/Header';
 import Previewer from './components/Previewer';
 import { Context } from './context';
 import { BLANK_URL } from './config';
@@ -54,10 +53,6 @@ export default function () {
           loading ?
             <Loading /> :
             <div className={styles.container} >
-              <Header
-                setUseMobileDevice={setUseMobileDevice}
-                useMobileDevice={useMobileDevice}
-              />
               <Previewer ref={previewerRef} />
             </div>
         }
