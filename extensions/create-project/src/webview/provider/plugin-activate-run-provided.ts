@@ -1,3 +1,5 @@
+/* eslint-disable no-case-declarations */
+/* eslint-disable @typescript-eslint/member-ordering */
 
 import * as vscode from 'vscode';
 import xorBy from 'lodash.xorby';
@@ -28,20 +30,33 @@ export default class PluginActivateAndRunProvider2 extends BaseWebviewProvider {
   }
 
   async handleReceiveMessage(type: string, payload: any) {
-    console.log('letter  调试/运行获取参数', type, payload)
+    console.log('letter  调试/运行获取参数', type, payload);
     switch (type) {
       case 'openInBrowser':
         // openInBrowser(payload.link);
         return;
+      case 'executeCommand':
+        vscode.commands.executeCommand(payload)
+        console.log('执行命令')
+        return;
       case 'getExtensionInfo':
         const extension = vscode.extensions.getExtension(payload);
-        const packageJson = extension.packageJson;
-        console.log('packageJson', packageJson)
-        this.sendMessage('setExtensionData', packageJson)
-      //   return vscode.window.withProgress(
-      //     { location: vscode.ProgressLocation.Notification },
-      //     (progress) => {
-      //         progress.report({ message: `正在安装${payload}插件` });
+        const packageJson = extension?.packageJSON;
+        const configuration = vscode.workspace.getConfiguration(payload)
+        const formatData = {
+          availConf: packageJson.availconf,
+          config: {
+            activate: configuration.get(`${packageJson.shortCut}.activate`),
+            debug: configuration.get(`${packageJson.shortCut}.debug`),
+          },
+        };
+        console.log('packageJson', packageJson, formatData);
+
+        this.sendMessage('setExtensionConfig', formatData);
+        //   return vscode.window.withProgress(
+        //     { location: vscode.ProgressLocation.Notification },
+        //     (progress) => {
+        //         progress.report({ message: `正在安装${payload}插件` });
 
       //         return vscode.commands.executeCommand(
       //             'workbench.extensions.installExtension',
@@ -49,7 +64,8 @@ export default class PluginActivateAndRunProvider2 extends BaseWebviewProvider {
       //         );
       //     },
       // );
-       default:
+        return;
+      default:
         return true;
     }
   }

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Button } from 'antd';
 // import { PostMessageClient } from '@ad/postmessage-client';
 import { OPEN_TYPE, PluginTypeEnum } from './types';
 import { Input, Select } from 'antd';
@@ -25,21 +26,21 @@ const mockPluginList = [
 
 const DebugAndRunPlugin = () => {
   const [pluginId, setPluginId] = useState<string | undefined>(undefined);
-  const [extensionData, setExtensionData] = useState(undefined);
+  const [extensionConfig, setExtensionConfig] = useState<{ availConf: {activate?: string, debug?: string }} | undefined>(undefined);
   const [send] = useSendMessage();
 
 
   useReceiveMessage(
     {
       // loadData: (payload: any) => setDeployMethods(payload),
-      setExtensionData: (value) => handleSetExtension(value),
+      setExtensionConfig: (value) => handleSetExtension(value),
     },
     [],
   );
 
   const handleSetExtension = (value) => {
     console.log('receive extension', value);
-    setExtensionData(value);
+    setExtensionConfig(value);
   };
   const onRequestClick = (id: string) => {
     return send('install', id);
@@ -87,10 +88,19 @@ const DebugAndRunPlugin = () => {
   const setPluginLoading = (id: string, isLoading: boolean) => {
   };
 
+  const handleClick = (command) => {
+    send('executeCommand', command);
+  }
   return (
     <>
       <div>测试测试 PluginManagement</div>
       <Select style={{ width: '100%' }} options={mockPluginList.map(item => ({ label: item, value: item }))} onChange={handleChange} />
+      {
+        extensionConfig?.availConf?.activate ? <Button onClick={() => handleClick(extensionConfig?.availConf?.activate)}>激活</Button> : null
+      }
+      {
+        extensionConfig?.availConf?.debug ? <Button onClick={() => handleClick(extensionConfig?.availConf?.debug)}>调试</Button> : null
+      }
     </>
   );
 };
