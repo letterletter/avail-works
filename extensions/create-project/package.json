@@ -66,18 +66,18 @@
     },
     "menus": {
       "view/title": [
-          {
-              "command": "plugin-list-manage.refresh",
-              "when": "view == plugin-management",
-              "group": "navigation@1"
-          },
-          {
-              "command": "plugin-list-manage.openConfig",
-              "when": "view == plugin-management",
-              "group": "navigation@2"
-          }
+        {
+          "command": "plugin-list-manage.refresh",
+          "when": "view == plugin-management",
+          "group": "navigation@1"
+        },
+        {
+          "command": "plugin-list-manage.openConfig",
+          "when": "view == plugin-management",
+          "group": "navigation@2"
+        }
       ]
-  }
+    }
   },
   "dependencies": {
     "@appworks/common-service": "0.1.0",
@@ -96,7 +96,7 @@
     "progress-bar-webpack-plugin": "^2.1.0",
     "css-loader": "5.2.7",
     "lodash.xorby": "4.7.0",
-    "less": "4.0.0",
+    "less": "3.5.0",
     "less-loader": "7.0.0",
     "style-loader": "2.0.0"
   },

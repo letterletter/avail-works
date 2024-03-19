@@ -8,19 +8,7 @@
   "outputDir": "../build",
   "plugins": [
     [
-      "build-plugin-fusion",
-      {
-        "themePackage": [
-          {
-            "name": "@alifd/theme-iceworks-dark",
- "default": true
-          },
-          {
-            "name": "@alifd/theme-design-pro",
-            "default": true
-          }
-        ]
-      }
+      "build-plugin-fusion"
     ],
     [
       "build-plugin-css-assets-local",

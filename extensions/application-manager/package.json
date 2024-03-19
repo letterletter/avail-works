@@ -223,12 +223,12 @@
         "command": "avail-plugin-management.refresh",
         "title": "刷新",
         "icon": "assets/light/upgrade.svg"
-    },
-    {
+      },
+      {
         "command": "avail-plugin-management.openConfig",
         "title": "配置插件",
         "icon": "assets/light/setting.svg"
-    }
+      }
     ],
     "menus": {
       "commandPalette": [

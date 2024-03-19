@@ -23,5 +23,7 @@ extensions/*/out
 
 **/package-lock.json
 **/build
-
+**/dist
 *.vsix
+
+dist/*
