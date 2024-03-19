@@ -1,3 +1,4 @@
 {
-  "iceworksProjectCreator.create-project.commands.start.title": "AppWorks: Select Scaffold to Create Application"
+  "iceworksProjectCreator.create-project.commands.start.title": "AppWorks: Select Scaffold to Create Application",
+  "iceworksProjectCreator.create-project.commands.start.debug": "AvailWorks: 调试创建"
 }

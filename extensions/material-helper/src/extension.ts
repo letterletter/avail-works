@@ -69,6 +69,12 @@ export function activate(context: vscode.ExtensionContext) {
     }),
   );
 
+  subscriptions.push(
+    registerCommand('material-helper.material-importer.debug', () => {
+      vscode.window.showInformationMessage('Hello Debug from plugin availworks-material-helper');
+    }),
+  )
+
   // views
   createComponentsTreeView(context);
   createPagesTreeView(context);

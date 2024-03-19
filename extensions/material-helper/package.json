@@ -3,8 +3,13 @@
   "displayName": "AvailWorks Component Helper",
   "description": "Easily use Component in React/Vue/Rax.",
   "publisher": "letterletter",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "./build/extension.js",
+  "shortCut": "MaterHelper",
+  "availconf": {
+    "debug": "material-helper.material-importer.debug",
+    "activate": "material-helper.material-importer.start"
+  },
   "engines": {
     "vscode": "^1.41.0"
   },
@@ -24,7 +29,9 @@
   ],
   "icon": "assets/logo.png",
   "activationEvents": [
-    "onStartupFinished"
+    "onStartupFinished",
+    "onCommand:material-helper.material-importer.debug",
+    "onCommand:material-helper.material-importer.start"
   ],
   "contributes": {
     "commands": [
@@ -37,41 +44,8 @@
         }
       },
       {
-        "command": "material-helper.component-creator.start",
-        "title": "%iceworksMaterialHelper.commands.componentCreator.start.title%"
-      },
-      {
-        "command": "appworks-material-helper.debug-materials.start",
-        "title": "%iceworksMaterialHelper.commands.debugMaterials.start.title%"
-      },
-      {
-        "command": "material-helper.showMaterialDocs",
-        "title": "%iceworksMaterialHelper.commands.showAllMaterialQuickPicks.title%"
-      },
-      {
-        "command": "material-helper.pages.add",
-        "title": "%iceworksMaterialHelper.command.pages.add.title%",
-        "icon": {
-          "light": "assets/light/add.svg",
-          "dark": "assets/dark/add.svg"
-        }
-      },
-
-      {
-        "command": "material-helper.components.add",
-        "title": "%iceworksMaterialHelper.command.components.add.title%",
-        "icon": {
-          "light": "assets/light/add.svg",
-          "dark": "assets/dark/add.svg"
-        }
-      },
-      {
-        "command": "material-helper.components.refresh",
-        "title": "%iceworksMaterialHelper.command.components.refresh.title%",
-        "icon": {
-          "light": "assets/light/refresh.svg",
-          "dark": "assets/dark/refresh.svg"
-        }
+        "command": "onCommand:material-helper.material-importer.debug",
+        "title": "%iceworksMaterialHelper.commands.materialImporter.debug.title%"
       }
     ],
     "menus": {
@@ -110,18 +84,6 @@
           "command": "material-helper.showMaterialDocsForCurrentFile",
           "group": "iceworksMaterialHelper",
           "when": "editorTextFocus && appworks:isJSXFile"
-        }
-      ],
-      "editor/title": [
-        {
-          "command": "material-helper.material-importer.start",
-          "group": "navigation@01",
-          "when": "appworks:isJSXFile"
-        },
-        {
-          "command": "material-helper.showMaterialDocsForCurrentFile",
-          "group": "navigation@02",
-          "when": "appworks:isJSXFile"
         }
       ],
       "view/title": [
@@ -176,12 +138,6 @@
     "configuration": {
       "title": "AppWorks Material Helper",
       "properties": {
-        "appworks.openDocLinkInsideVSCode": {
-          "type": "boolean",
-          "default": false,
-          "description": "%iceworksMaterialHelper.configuration.openInBrowserDescription%",
-          "title": "Open Doc Link Inside VSCode"
-        },
         "appworks.materialSources": {
           "type": "array",
           "description": "%iceworksMaterialHelper.configuration.properties.appworks.materialSources.description%",
@@ -234,6 +190,17 @@
           "type": "string",
           "default": "",
           "description": "%iceworksMaterialHelper.configuration.properties.appworks.generateComponentPath.description%"
+        },
+        "MaterHelper.activate": {
+          "type": "string",
+          "default": "material-helper.material-importer.debug",
+          "description": "activate command",
+          "readOnly": true
+        },
+        "MaterHelper.debug": {
+          "type": "string",
+          "default": "material-helper.material-importer.debug",
+          "description": "debug command"
         }
       }
     },

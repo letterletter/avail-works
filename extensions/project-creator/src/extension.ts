@@ -9,7 +9,7 @@ import i18n from './i18n';
 
 // eslint-disable-next-line
 const { name, version } = require('../package.json');
-const recorder = {} //  new Recorder(name, version);
+const recorder = {}; //  new Recorder(name, version);
 
 const { window, ViewColumn } = vscode;
 
@@ -52,6 +52,13 @@ export function activate(context: vscode.ExtensionContext) {
   subscriptions.push(
     registerCommand('project-creator.create-project.start', () => {
       activeProjectCreatorWebview();
+    }),
+  );
+
+
+  subscriptions.push(
+    registerCommand('project-creator.create-project.debug', () => {
+      vscode.window.showInformationMessage('Hello Debug from plugin availworks-project-creator');
     }),
   );
 

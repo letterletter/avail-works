@@ -1,3 +1,4 @@
 {
-  "iceworksProjectCreator.create-project.commands.start.title": "AppWorks: 选择模板创建应用"
+  "iceworksProjectCreator.create-project.commands.start.title": "AppWorks: 选择模板创建应用",
+  "iceworksProjectCreator.create-project.commands.start.debug": "AvailWorks: 调试创建"
 }
