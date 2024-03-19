@@ -53,8 +53,8 @@
     "views": {
       "PluginList": [
         {
-          "id": "plugin-list-provider",
-          "name": "插件列表-letter",
+          "id": "plugin-activate-run",
+          "name": "激活/调试",
           "type": "webview"
         },
         {

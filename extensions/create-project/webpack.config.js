@@ -52,6 +52,13 @@ const webviewConfig = {
       "webview",
       "source/plugin-manage",
       "index.tsx"
+    ),
+    "debug-run-manage": path.join(
+      __dirname,
+      "src",
+      "webview",
+      "source/debug-run-extension",
+      "index.tsx"
     )
   },
   resolve: {

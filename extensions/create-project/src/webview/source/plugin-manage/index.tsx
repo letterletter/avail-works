@@ -1,5 +1,6 @@
-import App from "./app";
-import React from "react";
-import ReactDOM from "react-dom";
+import App from './app';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-ReactDOM.render(<App />, document.getElementById("ice-container"));
+// eslint-disable-next-line react/no-deprecated
+ReactDOM.render(<App />, document.getElementById('ice-container'));
